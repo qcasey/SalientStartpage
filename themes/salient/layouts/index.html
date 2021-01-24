@@ -1,0 +1,63 @@
+<html>
+
+{{ partial "head.html" . }}
+
+<body class="bg-gray-100 dark:bg-gray-900 h-full">
+    <div class="p-2 md:p-4">
+        {{ if .Site.Params.Clock }}
+        <div class="flex py-8 md:py-8 max-w-4xl mx-auto justify-center">
+            <div class="text-4xl md:text-6xl font-black text-{{ $.Site.Params.Colors.Text }}-500 dark:text-gray-200"
+                id="clock">&ThinSpace;</div>
+        </div>
+        {{ end }}
+
+        {{ if .Site.Params.Search }}
+        <div class="flex py-8 md:py-16 max-w-4xl mx-auto justify-center">
+            <form action="https://duckduckgo.com/?q=" class="flex flex-1">
+                <input type="text" autofocus="" name="q" id="q"
+                    class="focus:border-{{ .Site.Params.Colors.Highlight }}-300 bg-white dark:bg-gray-800 p-2 flex-1 rounded-md sm:text-sm border-{{ .Site.Params.Colors.Highliht }}-300 text-{{ $.Site.Params.Colors.Text }}-500 dark:text-gray-200 text-lg "
+                    placeholder="Search" />
+            </form>
+        </div>
+        {{ end }}
+
+        <div class="flex flex-wrap flex-row py-0 md:py-4 max-w-4xl mx-auto">
+            {{ partial "featured.html" . }}
+        </div>
+
+        <div class="flex flex-wrap flex-row py-4 max-w-7xl md:px-12 mx-auto">
+            {{ partial "standard.html" . }}
+        </div>
+
+    </div>
+
+    {{ if .Site.Params.Clock }}
+    <script>
+        var clock = document.getElementById('clock');
+
+        function time() {
+            var date = new Date();
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var seconds = date.getSeconds();
+
+            // Check whether AM or PM 
+            var newformat = hours >= 12 ? 'PM' : 'AM';
+
+            // Find current hour in AM-PM Format 
+            hours = hours % 12;
+
+            // To display "0" as "12" 
+            hours = hours ? hours : 12;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+
+            clock.textContent = hours + ":" + minutes + ":" + seconds + " " + newformat;
+        }
+        time();
+        setInterval(time, 1000);
+    </script>
+    {{ end }}
+</body>
+
+</html>

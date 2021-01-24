@@ -1,0 +1,142 @@
+languageCode: "en-us"
+title: "New Tab"
+theme: "salient"
+
+params:
+  # parts
+  clock: false
+  search: false # search box inline, if you don't apply Chromium patches this may be useful
+
+  colors: # https://tailwindcss.com/docs/customizing-colors
+    text: black
+    highlight: gray
+
+  featured:
+    - name: "YouTube"
+      logo: "/images/youtube.png"
+      url: "https://youtube.com"
+    - name: "Files"
+      logo: "/images/cloud.png"
+      url: "https://dropbox.com"
+    - name: "Notes"
+      logo: "/images/notes.png"
+      url: "https://dropbox.com"
+    - name: "Tasks"
+      logo: "/images/tasks.png"
+      url: "https://dropbox.com"
+    - name: "Github"
+      logo: "/images/github.png"
+      url: "https://github.com/"
+    - name: "Home"
+      logo: "/images/hass.png"
+      url: "http://192.168.1.8:8123/casa-di-casey/main"
+
+  standard:
+    - name: "Management"
+      items:
+        - name: "Proxmox"
+          url: "https://192.168.1.196:8006"
+        - name: "EdgeOS"
+          url: "https://192.168.1.1/"
+        - name: "pihole"
+          url: "http://192.168.1.2/admin/index.php"
+        - name: "Octoprint"
+          url: "http://192.168.1.18:5000/#temp"
+
+    - name: "Media"
+      items:
+        - name: "Plex"
+          url: "http://192.168.1.17:32400/web/index.html#"
+        - name: "Photos"
+          url: "http://192.168.1.17:2342"
+        - name: "Podcasts"
+          icon: "fas fa-podcast"
+          url: "http://192.168.1.17:8185/episodes"
+
+    - name: "Development"
+      items:
+        - name: "Twilio"
+          url: "https://www.twilio.com/console/wireless/usage/data"
+        - name: "Syncthing"
+          icon: "fas fa-globe"
+          url: "http://192.168.1.17:8384/"
+        - name: "Local Sync"
+          icon: "fas fa-globe"
+          url: "http://localhost:8080/"
+
+    - name: "Linux ISOs"
+      items:
+        - name: "Deluge"
+          url: "http://192.168.1.17:8112/"
+        - name: "Jackett"
+          url: "http://192.168.1.17:9117/UI/Dashboard"
+        - name: "Radarr"
+          url: "http://192.168.1.17:7878/"
+        - name: "Sonarr"
+          url: "http://192.168.1.17:8989/"
+        - name: "Flox"
+          icon: "fas fa-eye"
+          url: "http://192.168.1.17:8898/"
+
+    - name: "Reading"
+      items:
+        - name: "Reddit"
+          url: "https://www.reddit.com/"
+        - name: "Hacker News"
+          url: "https://news.ycombinator.com/"
+        - name: "Hackaday.io"
+          url: "https://hackaday.io/projects?sort=skulls"
+        - name: "Doctor Of Credit"
+          url: "https://www.doctorofcredit.com/"
+        - name: "Paperless"
+          url: "http://192.168.1.17:8000/documents"
+
+    - name: "Monitoring"
+      items:
+        - name: "Grafana"
+          url: "http://192.168.1.69:3010/d/Dp7Cd57Zza/proxmox-via-prometheus?orgId=1&refresh=10s"
+        - name: "Prometheus"
+          url: "http://192.168.1.69:9090/graph"
+        - name: "Scrutiny"
+          url: "http://192.168.1.196:8080/web/dashboard"
+
+    - name: "Banking"
+      items:
+        - name: "SchoolsFirst"
+          url: "https://www.schoolsfirstfcu.org/wps/portal/"
+        - name: "PayPal"
+          icon: "fab fa-paypal"
+          url: "https://www.paypal.com/us/home"
+        - name: "AmEx"
+          url: "https://online.americanexpress.com/myca/accountsummary/us/accounthome?request_type=authreg_acctAccountSummary&Face=en_US&omnlogin=us_homepage_myca"
+        - name: "Chase"
+          url: "https://secure05c.chase.com/web/auth/dashboard#/dashboard/index/index"
+        - name: "Vanguard"
+          url: "https://personal.vanguard.com/us/TPView"
+        - name: "Discover"
+          url: "https://www.discovercard.com/cardmembersvcs/achome/homepage"
+
+    - name: "Work"
+      items:
+        - name: "Informed Delivery"
+          url: "https://informeddelivery.usps.com/"
+        - name: "Schedule a Pickup"
+          url: "https://tools.usps.com/schedule-pickup-steps.htm"
+
+    - name: "Fun"
+      items:
+        - name: "Orbits Visualizer"
+          icon: "fas fa-palette"
+          url: "http://iacopoapps.appspot.com/hopalongwebgl/"
+        - name: "Mnt St Helens"
+          url: "https://www.youtube.com/watch?v=elizAugXVcI"
+        - name: "French Music"
+          url: "https://www.reddit.com/r/MFPMPPJWFA/"
+        - name: "WebGL Fluid Simulation"
+          url: "https://paveldogreat.github.io/WebGL-Fluid-Simulation/"
+        - name: "The Slowmo Guys"
+          url: "https://www.youtube.com/user/theslowmoguys/videos"
+
+# Do not change
+build:
+  writeStats: true
