@@ -1,5 +1,7 @@
 # Salient Startpage
 
+![./themes/demo/SalientStartpage.gif](./themes/demo/SalientStartpage.gif)
+
 A startpage with **light/dark mode**, **automatic favicons per site**, and **retained search bar focus**.
 
 For the latter Chromium new tab focus / custom new tab page, you'll want [these chromium patches](https://github.com/qcasey/chromium-patches). A little advanced, but worth it!
