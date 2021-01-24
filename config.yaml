@@ -29,29 +29,29 @@ params:
       url: "https://github.com/"
     - name: "Home"
       logo: "/images/hass.png"
-      url: "http://192.168.1.8:8123/casa-di-casey/main"
+      url: "http://google.com"
 
   standard:
     - name: "Management"
       items:
         - name: "Proxmox"
-          url: "https://192.168.1.196:8006"
+          url: "https://google.com"
         - name: "EdgeOS"
-          url: "https://192.168.1.1/"
+          url: "https://google.com"
         - name: "pihole"
-          url: "http://192.168.1.2/admin/index.php"
+          url: "http://google.com"
         - name: "Octoprint"
-          url: "http://192.168.1.18:5000/#temp"
+          url: "http://google.com"
 
     - name: "Media"
       items:
         - name: "Plex"
-          url: "http://192.168.1.17:32400/web/index.html#"
+          url: "http://google.com"
         - name: "Photos"
-          url: "http://192.168.1.17:2342"
+          url: "http://google.com"
         - name: "Podcasts"
           icon: "fas fa-podcast"
-          url: "http://192.168.1.17:8185/episodes"
+          url: "http://google.com"
 
     - name: "Development"
       items:
@@ -59,24 +59,24 @@ params:
           url: "https://www.twilio.com/console/wireless/usage/data"
         - name: "Syncthing"
           icon: "fas fa-globe"
-          url: "http://192.168.1.17:8384/"
+          url: "http://google.com"
         - name: "Local Sync"
           icon: "fas fa-globe"
-          url: "http://localhost:8080/"
+          url: "http://google.com"
 
     - name: "Linux ISOs"
       items:
         - name: "Deluge"
-          url: "http://192.168.1.17:8112/"
+          url: "http://google.com"
         - name: "Jackett"
-          url: "http://192.168.1.17:9117/UI/Dashboard"
+          url: "http://google.com"
         - name: "Radarr"
-          url: "http://192.168.1.17:7878/"
+          url: "http://google.com"
         - name: "Sonarr"
-          url: "http://192.168.1.17:8989/"
+          url: "http://google.com"
         - name: "Flox"
           icon: "fas fa-eye"
-          url: "http://192.168.1.17:8898/"
+          url: "http://google.com"
 
     - name: "Reading"
       items:
@@ -89,16 +89,16 @@ params:
         - name: "Doctor Of Credit"
           url: "https://www.doctorofcredit.com/"
         - name: "Paperless"
-          url: "http://192.168.1.17:8000/documents"
+          url: "http://google.com"
 
     - name: "Monitoring"
       items:
         - name: "Grafana"
-          url: "http://192.168.1.69:3010/d/Dp7Cd57Zza/proxmox-via-prometheus?orgId=1&refresh=10s"
+          url: "http://google.com"
         - name: "Prometheus"
-          url: "http://192.168.1.69:9090/graph"
+          url: "http://google.com"
         - name: "Scrutiny"
-          url: "http://192.168.1.196:8080/web/dashboard"
+          url: "http://google.com"
 
     - name: "Banking"
       items:
