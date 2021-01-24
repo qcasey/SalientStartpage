@@ -13,13 +13,22 @@ The startpage itself can be rendered to an `.html` file with a directoy of image
 * [Hugo](https://gohugo.io/getting-started/installing/)
 * [NodeJS](https://nodejs.org/en/download/)
 
-Then run
+# Testing
+
+You can download and test this code by doing
 
 ```
 git clone https://github.com/qcasey/SalientStartpage
+cd SalientStartpage
 npm install
-npm run build
+npm run serve
 ```
+
+# Building
+
+To build a static html page with images (to ./public/), run
+
+``npm run buid``
 
 `npm run build` downloads the favicons for each site defined in [`config.yaml`](./config.yaml), and tells Hugo to build for production.
 
