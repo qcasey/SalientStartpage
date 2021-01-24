@@ -121,5 +121,4 @@ dist
 # SalientStartpage: ignore generated
 hugo_stats.json
 assets/favicons
-assets/images
 config-prod.yaml
