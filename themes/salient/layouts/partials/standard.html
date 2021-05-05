@@ -23,15 +23,12 @@
                     <div class="mr-2" style="width: 20px; height: 20px"><i class="{{ $item.icon }}"></i></div>
                 {{ else }}
                     {{ $itemPath := printf "favicons/%s*" $item.name }}
-                    {{ $itemFavicon := resources.GetMatch $itemPath }}
-
-                    {{ if $itemFavicon }}
-                        {{ if ne (path.Ext $itemFavicon.RelPermalink) ".ico" }}
-                            {{ with (resources.Get $itemFavicon.RelPermalink) }}
-                                {{ $itemFavicon = .Resize "20x" }}
-                            {{ end }}
+                    {{ with resources.GetMatch $itemPath }}
+                        {{ $itemFavicon := . }}
+                        {{ if and (eq .ResourceType "image") (ne .MediaType.SubType "svg") (ne .MediaType.SubType "x-icon") }}
+                            {{ $itemFavicon = .Resize "20x png" }}
                         {{ end }}
-                        <img class="mr-2 max-h-6" width="20" src="{{ $itemFavicon.Permalink }}" alt="{{ $item.name }}">
+                        <img class="mr-2 max-h-6" width="20" height="20" src="{{ $.Site.Params.baseDir }}{{ $itemFavicon.Permalink }}" alt="{{ $item.name }}">
                     {{ end }}
                 {{ end }}
 
