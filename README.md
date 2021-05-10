@@ -8,30 +8,26 @@ For the latter Chromium new tab focus / custom new tab page, you'll want [these 
 
 This is compatible with [Homer](https://github.com/bastienwirtz/homer), you can copy/paste your sites/urls/icons from there to `config.yaml`.
 
-The startpage itself can be rendered to an `.html` file with a directoy of images. Download and install both:
+The startpage itself can be rendered to an `.html` file with a directory of images.
 
-* [Hugo](https://gohugo.io/getting-started/installing/)
-* [NodeJS](https://nodejs.org/en/download/)
+# Run with Docker
 
-# Testing
+Clone, build, and run the container:
 
-You can download and test this code by doing
-
-```
-git clone https://github.com/qcasey/SalientStartpage
-cd SalientStartpage
-npm install
-npm run serve
+```bash
+git clone https://github.com/qcasey/SalientStartpage && cd SalientStartpage
+docker build -t salient-startpage .
+docker run -p 8080:80 --name salient-startpage salient-startpage
 ```
 
-# Building
+Just want the HTML/CSS? Keep the container running like above, and copy the files out:
 
-To build a static html page with images (to ./public/), run
+```bash
+docker cp $(docker ps -aqf "name=salient-startpage"):/usr/share/nginx/html ./public
+```
 
-``npm run buid``
+You should be able to point a browser to ```./public```
 
-`npm run build` downloads the favicons for each site defined in [`config.yaml`](./config.yaml), and tells Hugo to build for production.
+# Configuring
 
-I run `npm run build` after adding new bookmarks, to publish those changes.
-
-Your startpage will be at `./public/index.html`.
+Rebuild the container above after making changes to ```config.yml```. The docker build step will fetch favicons to the bookmarks you define, and use Hugo to render the final version of your startpage.
