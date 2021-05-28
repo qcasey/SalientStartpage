@@ -1,6 +1,6 @@
 # Salient Startpage
 
-![./themes/demo/SalientStartpage.gif](./themes/demo/SalientStartpage.gif)
+![./themes/demo/SalientStartpage.gif](https://github.com/qcasey/SalientStartpage/blob/main/themes/demo/SalientStartpage.gif)
 
 A startpage with **light/dark mode**, **automatic favicons per site**, and **retained search bar focus**.
 
